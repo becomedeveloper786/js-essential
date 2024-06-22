@@ -11,20 +11,33 @@ body {
 .quiz-container {
   background-color: #fff;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px;
+  width: 90%;
   text-align: center;
+  animation: slideInUp 0.5s ease; 
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
 }
 
 h1 {
   color: #333;
   margin-bottom: 20px;
+  font-size: 2.5rem; 
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.25rem; 
   margin-bottom: 20px;
 }
 
@@ -44,28 +57,49 @@ p {
 
 button {
   padding: 15px 30px;
-  font-size: 16px;
+  font-size: 1rem; 
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #4ca3af;
+  background-color: #4CAF50;
   color: #fff;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
   width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  background-color: #09a514;
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button.active {
+  background-color: #007BFF;
+}
+
+button.active:hover {
+  background-color: #0056b3;
+}
+
+#submit {
+  margin-top: 20px;
+  background-color: #007BFF;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#submit:hover {
+  background-color: #0069d9;
 }
 
 #result {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 1.2rem; 
   font-weight: bold;
   color: #fff;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .options li {
       flex: 0 0 calc(100% - 20px); 
       max-width: calc(100% - 20px);

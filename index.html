@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quiz App</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="quiz-container">
         <h1>Interactive Quiz</h1>
         <p>What is the capital of France?</p>
         <ul class="options">
-            <li><button onclick="checkAnswer(this, 'A')">A. Paris</button></li>
-            <li><button onclick="checkAnswer(this, 'B')">B. London</button></li>
-            <li><button onclick="checkAnswer(this, 'C')">C. Berlin</button></li>
-            <li><button onclick="checkAnswer(this, 'D')">D. Madrid</button></li>
+            <li><button onclick="selectOption(this, 'A')">A. Paris</button></li>
+            <li><button onclick="selectOption(this, 'B')">B. London</button></li>
+            <li><button onclick="selectOption(this, 'C')">C. Berlin</button></li>
+            <li><button onclick="selectOption(this, 'D')">D. Madrid</button></li>
         </ul>
+        <button id="submit" onclick="submitAnswer()">Submit</button>
         <p id="result"></p>
     </div>
     <script src="script.js"></script>
